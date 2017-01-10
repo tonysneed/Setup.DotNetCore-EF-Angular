@@ -4,7 +4,7 @@
     - Server Manager, Properties, Click link
 
 2. Install Google Chrome browser
-  - Set as default
+    - Set as default
 
 3. Install Utilities
     - Adobe Reader
