@@ -1,4 +1,18 @@
-FROM microsoft/dotnet:latest
+# Build the image:
+# docker build -t helloaspnet:nanoserver .
+
+# Create and run a container:
+# docker run -d -p 5000:5000 --name helloaspnet helloaspnet
+
+# Get image IP address
+# docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" helloaspnet
+
+# Browse to app
+# http://172.27.236.169:5000
+
+# Alternate between Windows and Linux images
+# FROM microsoft/dotnet:1.1.0-sdk-projectjson
+FROM microsoft/dotnet:1.1.0-sdk-projectjson-nanoserver
 
 COPY . /app
 
@@ -6,8 +20,6 @@ WORKDIR /app
 
 RUN ["dotnet", "restore"]
 
-RUN ["dotnet", "build"]
+EXPOSE 5000
 
-EXPOSE 5000/tcp
-
-CMD ["dotnet", "run", "--server.urls", "http://*:5000"]
+ENTRYPOINT ["dotnet", "run", "--server.urls", "http://*:5000"]
