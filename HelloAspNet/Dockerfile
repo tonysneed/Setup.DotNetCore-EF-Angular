@@ -2,7 +2,7 @@
 # docker build -t helloaspnet:nanoserver .
 
 # Create and run a container:
-# docker run -d -p 5000:5000 --name helloaspnet helloaspnet
+# docker run -d -p 5000:5000 --name helloaspnet tonysneed/helloaspnet:1.1.0-sdk-projectjson
 
 # Get image IP address
 # docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" helloaspnet
