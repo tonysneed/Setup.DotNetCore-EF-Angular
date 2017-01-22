@@ -1,13 +1,15 @@
 # Build the image:
-# docker build -t helloaspnet:nanoserver .
+# docker build -t tonysneed/helloaspnet:1.1.0-sdk-projectjson .
+# docker build -t tonysneed/helloaspnet:nanoserver .
 
 # Create and run a container:
 # docker run -d -p 80:5000 --name helloaspnet tonysneed/helloaspnet:1.1.0-sdk-projectjson
+# docker run -d -p 80:5000 --name helloaspnet tonysneed/helloaspnet:nanoserver
 
-# Get image IP address (Windows container)
+# Get image IP address (local Windows container)
 # docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" helloaspnet
 
-# Browse to app
+# Browse to app (local Windows container)
 # http://172.27.236.169
 
 # Alternate between Windows and Linux images
