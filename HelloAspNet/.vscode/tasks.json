@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}\\project.json"
+                "${workspaceRoot}/HelloAspNet.csproj"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"
