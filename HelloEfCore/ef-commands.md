@@ -12,4 +12,3 @@ Reference: https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet
 ```
 dotnet ef dbcontext scaffold "Server=(local)\sqlexpress;Database=NorthwindSlim;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models -f
 ```
- 
